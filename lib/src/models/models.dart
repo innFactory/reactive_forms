@@ -35,7 +35,7 @@ abstract class AbstractControl<T> {
   ControlStatus _status;
 
   /// The parent control.
-  AbstractControl<Object>? parent;
+  AbstractControl<dynamic>? parent;
 
   /// Async validators debounce timer.
   Timer? _debounceTimer;
