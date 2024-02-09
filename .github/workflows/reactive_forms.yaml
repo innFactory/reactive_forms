@@ -20,10 +20,10 @@ jobs:
     # This job runs on Linux
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: subosito/flutter-action@v1
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.0.0"
+          flutter-version: "3.10.0"
           channel: "stable"
       - run: flutter pub get
       - run: flutter test --no-pub --coverage
@@ -33,10 +33,10 @@ jobs:
     name: Analyze
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: subosito/flutter-action@v1
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.0.0"
+          flutter-version: "3.10.0"
           channel: "stable"
       - run: flutter pub get
       - name: Analyze lib
@@ -48,13 +48,13 @@ jobs:
     name: Format
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: subosito/flutter-action@v1
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.0.0"
+          flutter-version: "3.10.0"
           channel: "stable"
       - run: flutter pub get
       - name: Format lib
-        run: flutter format lib --set-exit-if-changed
+        run: dart format lib --set-exit-if-changed
       - name: Format test
-        run: flutter format test --set-exit-if-changed
+        run: dart format test --set-exit-if-changed
