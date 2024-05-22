@@ -1,3 +1,21 @@
+# 17.0.1
+
+- Reduce `intl` dependency constraint to match Flutter 3.16.0.
+- NumberValidator allows null values.
+
+# 17.0.0
+
+## Breaking changes
+
+- Removed deprecated `onWillPop` from `ReactiveForm` and `ReactiveFormBuilder` widgets. 
+It was replaced with the `PopScope` widget.
+- `Validators.number` allows now to define negative numbers and decimal numbers with the addition
+of two optional arguments `allowNegatives` and `allowedDecimals`.
+
+## Features
+
+- Add `canPop` and `onPopInvoked` to `ReactiveForm` and `ReactiveFormBuilder` widgets.
+
 # 16.1.1
 
 ## Fixes
